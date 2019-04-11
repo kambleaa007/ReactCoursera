@@ -7,7 +7,20 @@ import Menu from './components/MenuComponent';
 
 import './App.css';
 
+import { DISHES } from './shared/dishes'
+
 class App extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      dishes : DISHES
+    };
+
+  }// constructor
+
+
   render() {
     return (
       <div>
@@ -18,9 +31,14 @@ class App extends Component {
         </div>
       </Navbar>
       
-      <Menu />
-
-
+    <Menu dishes={this.state.dishes}/> 
+    {
+      /* // Child Componenet in `App` (Parent Componenet) 
+      // Added Attib dishes
+      // passing data to Menu Child Compo 
+      // in child use Attib passed data thro' props
+      */
+     }
       
         
         
