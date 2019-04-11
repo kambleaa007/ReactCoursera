@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 import { Media, Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
-
+import Dishdetail from './DishdetailComponenet'
 
 
 class Menu extends Component {
@@ -28,18 +28,27 @@ class Menu extends Component {
     // onClick={ () => {this.onDishSelect(dish)} }
 
     renderDish(dish){
-    if(dish != null){  {/* click is hapended so, dish is not null then render below div */}
+    if(dish != null){  
+        {/* click is hapended so, dish is not null then render below div */}
+        {/*  
+            <Card>
+                <CardImg width="100%" src ={dish.image} alt ={dish.name} /> 
+                <CardBody>
+                    <CardTitle>{dish.name}</CardTitle>
+                    <CardText>{dish.description}</CardText>
+                </CardBody>
+            </Card>  
+        */} 
+        
+        
             return(
-                <Card>
-                    <CardImg width="100%" src ={dish.image} alt ={dish.name} /> 
-                    <CardBody>
-                        <CardTitle>{dish.name}</CardTitle>
-                        <CardText>{dish.description}</CardText>
-                    </CardBody>
-                </Card>
+
+                <Dishdetail dish={dish} />              
+
+                
             )
-        }
-        else{ {/* click is not hapended yet so, dish is null then render empty div only */}
+        }else{ 
+        {/* click is not hapended yet so, dish is null then render empty div only */}            
             return(
                 <div></div>
             );
