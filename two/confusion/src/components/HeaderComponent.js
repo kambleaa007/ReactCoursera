@@ -6,7 +6,7 @@ class Header extends Component{
     render(){
         return(
             <React.Fragment>
-                <Navbar dark color="primary">        
+                <Navbar dark>        
                     <div className="container">
                     <NavbarBrand href="/">Recipe Con Fusionae</NavbarBrand>
                     </div>
