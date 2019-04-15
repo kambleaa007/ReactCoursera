@@ -2,7 +2,7 @@
   "name": "confusion",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://kambleaa007.github.io/ReactCoursera/two/confusion/public/",
+  "homepage":"https://kambleaa007.github.io/ReactCoursera/two/confusion/",
   "dependencies": {
     "bootstrap": "^4.0.0",
     "bootstrap-social": "^5.1.1",

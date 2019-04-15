@@ -1,3 +1,7 @@
+---
+permalink: /index.html
+---
+
 npm install gh-pages
 for github pages.io deployment of react app
 
