@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ReactCoursera/two/confusion/precache-manifest.42de6908994f09a488e0af6f5b45cf7f.js"
+  "/ReactCoursera/precache-manifest.373044bae5649b9d1cb04471fe0ce042.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/ReactCoursera/two/confusion/index.html", {
+workbox.routing.registerNavigationRoute("/ReactCoursera/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
