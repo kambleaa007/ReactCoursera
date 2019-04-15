@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ReactCoursera/two/confusion/precache-manifest.e1a39d99ed6128c1dd4aa697bd1421ec.js"
+  "/ReactCoursera/two/confusion/precache-manifest.42de6908994f09a488e0af6f5b45cf7f.js"
 );
 
 workbox.clientsClaim();
