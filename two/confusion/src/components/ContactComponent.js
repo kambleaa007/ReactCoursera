@@ -8,32 +8,27 @@ function Contact(props){
     return(
         <div className="container">
             <div className="row">
-                        <Breadcrumb>
-                            <BreadcrumbItem>
-                                <Link to='/home'>Home</Link>
-                            </BreadcrumbItem>
-                            <BreadcrumbItem active>Contact Us</BreadcrumbItem>
-                        </Breadcrumb>
-                        <div className="col-12">
-                            <h3>Contact Us</h3>
-                            <hr />
-                        </div>
-                    </div>
-
+                <Breadcrumb>
+                    <BreadcrumbItem>
+                        <Link to='/home'>Home</Link>
+                    </BreadcrumbItem>
+                    <BreadcrumbItem active>Contact Us</BreadcrumbItem>
+                </Breadcrumb>
+            </div>
             <div className="row row-content">
                 <div className="col-12">
                 <h3>Location Information</h3>
                 </div>
                 <div className="col-12 col-sm-4 offset-sm-1">
-                        <h5>Our Address</h5>
-                        <address>
-                        12B, Khooni Katilana Road<br />
-                        Clear Bloody Bay, Puraani Haveli<br />
-                        India<br />
-                        <i className="fa fa-phone"></i>: +1234 5678 90<br />
-                        <i className="fa fa-fax"></i>: +1234 5678 90<br />
-                        <i className="fa fa-envelope"></i>: <a href="mailto:confusion@food.net">ashishkamble191191@gmail.com</a>
-                        </address>
+                    <h5>Our Address</h5>
+                    <address>
+                    12B, Khooni Katilana Road<br />
+                    Clear Bloody Bay, Puraani Haveli<br />
+                    India<br />
+                    <i className="fa fa-phone"></i>: +1234 5678 90<br />
+                    <i className="fa fa-fax"></i>: +1234 5678 90<br />
+                    <i className="fa fa-envelope"></i>: <a href="mailto:confusion@food.net">ashishkamble191191@gmail.com</a>
+                    </address>
                 </div>
                 <div className="col-12 col-sm-6 offset-sm-1">
                     <h5>Map of our Location</h5>
