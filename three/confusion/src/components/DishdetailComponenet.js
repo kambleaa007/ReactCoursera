@@ -53,7 +53,7 @@ import { Control, LocalForm, Errors } from 'react-redux-form';
         }              
 
         return(   
-            <div className="container">
+            <div className="container"> 
             <div className="row">
                 <Breadcrumb>
                     <BreadcrumbItem>
