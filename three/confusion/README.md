@@ -15,7 +15,9 @@ npm install redux@3.7.2 --save
 npm install react-redux@5.0.7 --save
 
 
+### Try react-redux-form 
 
+npm install react-redux-form@1.16.8 --save
 
 
 
