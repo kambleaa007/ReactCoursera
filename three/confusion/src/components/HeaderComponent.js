@@ -26,9 +26,10 @@ class Header extends Component{
         this.setState({isModalOpen: !this.state.isModalOpen});
     }
 
-    handleLogin(){
+    handleLogin(event){
         this.toggleModal();
         alert("username: "+ this.username.value +"password: "+ this.password.value+"Remember: "+ this.rememebr.checked);
+        event.preventDefault();
     }
 
     render(){
