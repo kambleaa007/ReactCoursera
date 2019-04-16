@@ -2,10 +2,19 @@
 permalink: /index.html
 ---
 
+### Try github pages
 npm install gh-pages
 for github pages.io deployment of react app
 
 ### npm run deploy
+
+### Try React with Redux
+
+npm install redux@3.7.2 --save
+
+npm install react-redux@5.0.7 --save
+
+
 
 
 

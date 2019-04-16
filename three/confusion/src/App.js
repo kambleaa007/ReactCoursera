@@ -11,28 +11,29 @@ import './App.css';
 
 import { BrowserRouter } from 'react-router-dom';
 
+import { Provider } from 'react-redux';
+
+import { ConfigureStore } from './redux/configureStore';
 
 import { DISHES } from './shared/dishes'
 
+const store = ConfigureStore();
+
 class App extends Component {
 
-  constructor(props){
-    super(props);
 
-    this.state = {
-      dishes : DISHES
-    };
-
-  }// constructor
 
 
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <Main />
-        </div>
-      </BrowserRouter>
+      <Provider store={store}>
+        <BrowserRouter>
+          <div>
+            <Main />
+          </div>
+        </BrowserRouter>
+      </Provider>
+
       
     );
   }
