@@ -1,3 +1,5 @@
+/* 
+
 import { DISHES } from '../shared/dishes';
 import { COMMENTS } from '../shared/comments';
 import { PROMOTIONS } from '../shared/promotions';
@@ -17,3 +19,4 @@ export const Reducer = ( state= initialState, action)=>{
     return state;
 };// Pure Function As State is not gettin Changed
 
+*/
