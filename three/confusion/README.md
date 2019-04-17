@@ -19,8 +19,22 @@ npm install react-redux@5.0.7 --save
 
 npm install react-redux-form@1.16.8 --save
 
+### Try json-server
+
+npm install -g json-server
+
+create a folder with name `json-server` 
+cd json-server
+then,
+create a file `db.json`
+create folder `public` paste the folder inside public folder `images`
 
 
+json-server --watch db.json -d 2000 -p 3001
+
+-d for delay of 2sec
+-p for listen on port number 3001
+as 3000 is working for react app
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
