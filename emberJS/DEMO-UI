@@ -1,3 +1,699 @@
 ##CODE UI
 
+<html lang="en"><head><meta charset="UTF-8"><title>demoframe</title><meta name="robots" content="noindex,nofollow"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#005433"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="apple-touch-startup-image" href="images/ios_startup.png"><link rel="apple-touch-icon" href="images/appicon.png"><link rel="icon" sizes="192x192" href="images/appicon.png"><link rel="manifest" href="res/manifest.json"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/hint.css/1.3.6/hint.min.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet"><link rel="stylesheet" href="libStyle-8966c3f7c5.css"><link rel="stylesheet" href="style-da9bd45893.css"><style>.picker_wrapper.no_alpha .picker_alpha,.picker_wrapper.no_editor .picker_editor{display:none}.layout_default.picker_wrapper{display:flex;flex-flow:row wrap;justify-content:space-between;align-items:stretch;font-size:10px;width:25em;padding:.5em}.layout_default.picker_wrapper input,.layout_default.picker_wrapper button{font-size:1rem}.layout_default.picker_wrapper>*{margin:.5em}.layout_default.picker_wrapper::before{content:'';display:block;width:100%;height:0;order:1}.layout_default .picker_slider,.layout_default .picker_selector{padding:1em}.layout_default .picker_hue{width:100%}.layout_default .picker_sl{flex:1 1 auto}.layout_default .picker_sl::before{content:'';display:block;padding-bottom:100%}.layout_default .picker_editor{order:1;width:6rem}.layout_default .picker_editor input{width:calc(100% + 2px);height:calc(100% + 2px)}.layout_default .picker_sample{order:1;flex:1 1 auto}.layout_default .picker_done{order:1}.picker_wrapper{box-sizing:border-box;background:#f2f2f2;cursor:default;font-family:sans-serif;pointer-events:auto}.picker_wrapper button,.picker_wrapper input{margin:-1px}.picker_selector{position:absolute;z-index:1;display:block;transform:translate(-50%, -50%);border:2px solid white;border-radius:100%;box-shadow:0 0 3px 1px #67b9ff;background:currentColor;cursor:pointer}.picker_slider .picker_selector{border-radius:2px}.picker_hue{position:relative;background-image:linear-gradient(90deg, red, yellow, lime, cyan, blue, magenta, red);box-shadow:0 0 0 1px silver}.picker_sl{position:relative;box-shadow:0 0 0 1px silver;background-image:linear-gradient(180deg, white, rgba(255,255,255,0) 50%),linear-gradient(0deg, black, rgba(0,0,0,0) 50%),linear-gradient(90deg, gray, rgba(128,128,128,0))}.picker_alpha,.picker_sample{position:relative;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='2' height='2'%3E%3Cpath d='M1,0H0V1H2V2H1' fill='lightgrey'/%3E%3C/svg%3E") left top/contain white;box-shadow:0 0 0 1px silver}.picker_alpha .picker_selector,.picker_sample .picker_selector{background:none}.picker_editor input{box-sizing:border-box;font-family:monospace;padding:.1em .2em}.picker_sample::before{content:'';position:absolute;display:block;width:100%;height:100%;background:currentColor}.picker_done button{box-sizing:border-box;padding:.2em .5em;cursor:pointer}.picker_arrow{position:absolute;z-index:-1}.picker_wrapper.popup{position:absolute;z-index:2;margin:1.5em}.picker_wrapper.popup,.picker_wrapper.popup .picker_arrow::before,.picker_wrapper.popup .picker_arrow::after{background:#f2f2f2;box-shadow:0 0 10px 1px rgba(0,0,0,0.4)}.picker_wrapper.popup .picker_arrow{width:3em;height:3em;margin:0}.picker_wrapper.popup .picker_arrow::before,.picker_wrapper.popup .picker_arrow::after{content:"";display:block;position:absolute;top:0;left:0;z-index:-99}.picker_wrapper.popup .picker_arrow::before{width:100%;height:100%;transform:skew(45deg);transform-origin:0 100%}.picker_wrapper.popup .picker_arrow::after{width:150%;height:150%;box-shadow:none}.popup.popup_top{bottom:100%;left:0}.popup.popup_top .picker_arrow{bottom:0;left:0;transform:rotate(-90deg)}.popup.popup_bottom{top:100%;left:0}.popup.popup_bottom .picker_arrow{top:0;left:0;transform:rotate(90deg) scale(1, -1)}.popup.popup_left{top:0;right:100%}.popup.popup_left .picker_arrow{top:0;right:0;transform:scale(-1, 1)}.popup.popup_right{top:0;left:100%}.popup.popup_right .picker_arrow{top:0;left:0}</style></head><body style="overflow: inherit;"><div class="container loaded"><div class="landscape"><div class="shadow-wrap cfg-btn"><div title="Configure Tenant" class="action-btn"><i class="fa fa-cogs"></i></div></div> <div class="shadow-wrap link-btn"><div title="Show Link" class="action-btn"><i class="fa fa-picture-o"></i></div></div> <div class="shadow-wrap add-btn"><div title="Add Window" class="action-btn">+</div></div><div class="jsPanel jsPanel-standard jsPanel-theme-default jsPanel-depth-3 left-top-right" data-btnclose="enabled" data-btnmaximize="enabled" data-btnnormalize="enabled" data-btnminimize="enabled" data-btnsmallify="enabled" data-btnsmallifyrev="enabled" id="jsPanel-1" style="z-index: 100; width: 325px; height: 627px; left: 10px; top: 10px; opacity: 1;"><div class="jsPanel-hdr jsPanel-theme-default">
+                                <div class="jsPanel-headerbar">
+                                    <div class="jsPanel-headerlogo" style="touch-action: none; cursor: move;"></div>
+                                    <div class="jsPanel-titlebar" style="touch-action: none; cursor: move;">
+                                        <span class="jsPanel-title"></span>
+                                    </div>
+                                    <div class="jsPanel-controlbar" style="pointer-events: inherit;">
+                                        <div class="jsPanel-btn jsPanel-btn-smallify"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M28.65 20.85l-11.8-11.65c-0.5-0.5-1.3-0.5-1.75 0l-11.75 11.85c-0.5 0.5-0.5 1.3 0 1.75 0.25 0.25 0.55 0.35 0.9 0.35 0.3 0 0.65-0.1 0.9-0.35l10.85-10.95 10.9 10.8c0.5 0.5 1.3 0.5 1.75 0 0.5-0.5 0.5-1.3 0-1.8z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-smallifyrev"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M15.95 23.2c0 0 0 0 0 0-0.35 0-0.65-0.15-0.9-0.35l-11.7-11.9c-0.5-0.5-0.5-1.3 0-1.75 0.5-0.5 1.3-0.5 1.75 0l10.85 10.95 10.9-10.8c0.5-0.5 1.3-0.5 1.75 0s0.5 1.3 0 1.75l-11.75 11.7c-0.25 0.25-0.55 0.4-0.9 0.4z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-minimize"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M27.3 28.5h-22.6c-0.85 0-1.5-0.65-1.5-1.5s0.65-1.5 1.5-1.5h22.55c0.85 0 1.5 0.65 1.5 1.5s-0.65 1.5-1.45 1.5z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-normalize"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M27.9 3.75h-18.8c-0.4 0-0.75 0.35-0.75 0.75v4.3c0 0.1 0 0.2 0.050 0.3h-4.2c-0.55 0-1 0.45-1 1v17.4c0 0.55 0.45 1 1 1h17.65c0.55 0 1-0.45 1-1v-3.7c0.050 0 0.1 0.050 0.2 0.050h4.9c0.4 0 0.75-0.35 0.75-0.75v-18.6c-0.050-0.4-0.4-0.75-0.8-0.75zM5.2 26.5v-12.95c0.050 0 0.1 0 0.15 0h15.4c0.050 0 0.1 0 0.15 0v12.95h-15.7zM27.15 22.35h-4.15c-0.050 0-0.15 0-0.2 0.050v-12.3c0-0.55-0.45-1-1-1h-12c0.050-0.1 0.050-0.2 0.050-0.3v-3.55h17.3v17.1z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-maximize"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M27.55 3.9h-22.6c-0.55 0-1 0.45-1 1v22.3c0 0.55 0.45 1 1 1h22.55c0.55 0 1-0.45 1-1v-22.3c0.050-0.55-0.4-1-0.95-1zM5.95 26.15v-18h20.55v18h-20.55z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-close"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M17.75 16l9.85-9.85c0.5-0.5 0.5-1.3 0-1.75-0.5-0.5-1.3-0.5-1.75 0l-9.85 9.85-9.85-9.9c-0.5-0.5-1.3-0.5-1.75 0-0.5 0.5-0.5 1.3 0 1.75l9.85 9.9-9.9 9.85c-0.5 0.5-0.5 1.3 0 1.75 0.25 0.25 0.55 0.35 0.9 0.35s0.65-0.1 0.9-0.35l9.85-9.85 9.85 9.85c0.25 0.25 0.55 0.35 0.9 0.35s0.65-0.1 0.9-0.35c0.5-0.5 0.5-1.3 0-1.75l-9.9-9.85z"></path></svg></div>
+                                    </div>
+                                </div>
+                                <div class="jsPanel-hdr-toolbar"></div>
+                            </div>
+                            <div class="jsPanel-content" style="border-top: 1px solid;"><iframe src="//acn2.flybits.app" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-top-navigation allow-top-navigation-by-user-activation"></iframe><div class="jsPanel-iframe-overlay"></div></div>
+                            <div class="jsPanel-minimized-box"></div>
+                            <div class="jsPanel-ftr" style="touch-action: none; cursor: move;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-n" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-e" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-s" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-w" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-ne" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-se" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-sw" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-nw" style="z-index: 90;"></div></div><div class="jsPanel jsPanel-standard jsPanel-theme-default jsPanel-depth-3 left-top-right" data-btnclose="enabled" data-btnmaximize="enabled" data-btnnormalize="enabled" data-btnminimize="enabled" data-btnsmallify="enabled" data-btnsmallifyrev="enabled" id="jsPanel-2" style="z-index: 101; width: 325px; height: 627px; left: 345px; top: 10px; opacity: 1;"><div class="jsPanel-hdr jsPanel-theme-default">
+                                <div class="jsPanel-headerbar">
+                                    <div class="jsPanel-headerlogo" style="touch-action: none; cursor: move;"></div>
+                                    <div class="jsPanel-titlebar" style="touch-action: none; cursor: move;">
+                                        <span class="jsPanel-title"></span>
+                                    </div>
+                                    <div class="jsPanel-controlbar">
+                                        <div class="jsPanel-btn jsPanel-btn-smallify"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M28.65 20.85l-11.8-11.65c-0.5-0.5-1.3-0.5-1.75 0l-11.75 11.85c-0.5 0.5-0.5 1.3 0 1.75 0.25 0.25 0.55 0.35 0.9 0.35 0.3 0 0.65-0.1 0.9-0.35l10.85-10.95 10.9 10.8c0.5 0.5 1.3 0.5 1.75 0 0.5-0.5 0.5-1.3 0-1.8z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-smallifyrev"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M15.95 23.2c0 0 0 0 0 0-0.35 0-0.65-0.15-0.9-0.35l-11.7-11.9c-0.5-0.5-0.5-1.3 0-1.75 0.5-0.5 1.3-0.5 1.75 0l10.85 10.95 10.9-10.8c0.5-0.5 1.3-0.5 1.75 0s0.5 1.3 0 1.75l-11.75 11.7c-0.25 0.25-0.55 0.4-0.9 0.4z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-minimize"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M27.3 28.5h-22.6c-0.85 0-1.5-0.65-1.5-1.5s0.65-1.5 1.5-1.5h22.55c0.85 0 1.5 0.65 1.5 1.5s-0.65 1.5-1.45 1.5z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-normalize"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M27.9 3.75h-18.8c-0.4 0-0.75 0.35-0.75 0.75v4.3c0 0.1 0 0.2 0.050 0.3h-4.2c-0.55 0-1 0.45-1 1v17.4c0 0.55 0.45 1 1 1h17.65c0.55 0 1-0.45 1-1v-3.7c0.050 0 0.1 0.050 0.2 0.050h4.9c0.4 0 0.75-0.35 0.75-0.75v-18.6c-0.050-0.4-0.4-0.75-0.8-0.75zM5.2 26.5v-12.95c0.050 0 0.1 0 0.15 0h15.4c0.050 0 0.1 0 0.15 0v12.95h-15.7zM27.15 22.35h-4.15c-0.050 0-0.15 0-0.2 0.050v-12.3c0-0.55-0.45-1-1-1h-12c0.050-0.1 0.050-0.2 0.050-0.3v-3.55h17.3v17.1z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-maximize"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M27.55 3.9h-22.6c-0.55 0-1 0.45-1 1v22.3c0 0.55 0.45 1 1 1h22.55c0.55 0 1-0.45 1-1v-22.3c0.050-0.55-0.4-1-0.95-1zM5.95 26.15v-18h20.55v18h-20.55z"></path></svg></div>
+                                        <div class="jsPanel-btn jsPanel-btn-close"><svg class="jsPanel-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"><path fill="currentColor" d="M17.75 16l9.85-9.85c0.5-0.5 0.5-1.3 0-1.75-0.5-0.5-1.3-0.5-1.75 0l-9.85 9.85-9.85-9.9c-0.5-0.5-1.3-0.5-1.75 0-0.5 0.5-0.5 1.3 0 1.75l9.85 9.9-9.9 9.85c-0.5 0.5-0.5 1.3 0 1.75 0.25 0.25 0.55 0.35 0.9 0.35s0.65-0.1 0.9-0.35l9.85-9.85 9.85 9.85c0.25 0.25 0.55 0.35 0.9 0.35s0.65-0.1 0.9-0.35c0.5-0.5 0.5-1.3 0-1.75l-9.9-9.85z"></path></svg></div>
+                                    </div>
+                                </div>
+                                <div class="jsPanel-hdr-toolbar"></div>
+                            </div>
+                            <div class="jsPanel-content" style="border-top: 1px solid;"><iframe src="//acn2.flybits.app" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-scripts allow-top-navigation allow-top-navigation-by-user-activation"></iframe></div>
+                            <div class="jsPanel-minimized-box"></div>
+                            <div class="jsPanel-ftr" style="touch-action: none; cursor: move;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-n" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-e" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-s" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-w" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-ne" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-se" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-sw" style="z-index: 90;"></div><div class="jsPanel-resizeit-handle jsPanel-resizeit-nw" style="z-index: 90;"></div></div></div><div class="loading-view"><div class="spin-wrap"><div class="spinner"><div class="dot1"></div> <div class="dot2"></div></div></div></div></div><!-- components:template:start --><script type="x-template" id="view-loading"><div class="loading-view">
+  <div class="spin-wrap">
+    <div class="spinner">
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+    </div>
+  </div>
+</div></script><script type="x-template" id="loader-bar"><div class="loader-bar">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div></script><script type="x-template" id="login-modal"><div class="login-modal" :class="[display?'open':'']">
+  <div class="modal-window">
+    <div class="logo-wrap" :class="[isLoading?'loading':'']">
+      <img class="logo" src="images/logoIcon.png" alt="">
+      <div class="lds-ripple loading-ind">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <form class="entry-fields">
+      <input class="entry-field email" type="text" placeholder="Email" v-model="email">
+      <input class="entry-field" type="password" placeholder="Password" v-model="password" v-on:keyup.enter="login">
+      <div class="login-trigger trigger-btn" :class="[hasValue && !isLoading?'':'disabled']" v-on:click="login">LOGIN</div>
+    </form>
+    <div class="error-blk">{{error}}</div>
+  </div>
+</div></script><script type="x-template" id="api-usage"><div class="api-usage">
+  <div class="track">
+    <div class="segment hint--bottom" v-for="segment in segments" :style="{width:segment.styleWidth,'background-color':segment.color}" :data-hint="segmentLabel(segment)"></div>
+  </div>
+  <div class="totals" v-if="max && total">API USAGE: {{total.toLocaleString()}} / {{max.toLocaleString()}}</div>
+</div></script><script type="x-template" id="theme-editor"><div class="theme-editor">
+  <loading-view v-if="isLoading"></loading-view>
+  <div class="inner-wrap">
+      <div class="divider-row">Concierge Mode</div>
+    <div class="mode-selector option">
+      <div class="mode fullscreen" v-on:click="setMode('fullscreen')">
+        <div class="label">Fullscreen</div>
+        <img class="icon" src="images/type-fullscreen.png">
+      </div>
+      <div class="mode widget" v-on:click="setMode('widget')">
+        <div class="label">Widget</div>
+        <img class="icon" src="images/type-widget.png">
+      </div>
+      <div class="mode embedded" v-on:click="setMode('embedded')">
+        <div class="label">Embedded</div>
+        <img class="icon" src="images/type-embedded.png">
+      </div>
+    </div>
+    <div class="divider-row">Images</div>
+    <div class="image-selection option" v-if="theme">
+      <div class="splash-selection img-wrap option">
+        <div class="label">Splashscreen Image</div>
+        <image-field v-model="theme.splashURL" aspect-ratio="8.8/16"></image-field>
+      </div>
+      <div class="appscreen-selection img-wrap option">
+        <div class="label">App Screen Image</div>
+        <image-field v-model="theme.appscreenURL" aspect-ratio="8.8/16"></image-field>
+      </div>
+      <div class="widget-selection img-wrap option">
+        <div class="label">Widget Icon</div>
+        <image-field v-model="theme.widgetIconURL" aspect-ratio="1/1"></image-field>
+      </div>
+      <div class="toggle">
+        <div class="label">Icon in Header</div>
+        <toggle-view v-model="theme.enableHeaderIcon"></toggle-view>
+      </div>
+    </div>
+    <div class="divider-row">Core Colours</div>
+    <div class="color-selection option" v-if="theme">
+      <div class="color">
+        <div class="label">Primary</div>
+        <color-picker v-model="theme.primaryColor"></color-picker>
+      </div>
+      <div class="color">
+        <div class="label">Secondary</div>
+        <color-picker v-model="theme.secondaryColor"></color-picker>
+      </div>
+      <div class="color">
+        <div class="label">Tertiary</div>
+        <color-picker v-model="theme.tertiaryColor"></color-picker>
+      </div>
+      <div class="color">
+        <div class="label">Foreground</div>
+        <color-picker v-model="theme.fgColor"></color-picker>
+      </div>
+    </div>
+    <div class="divider-row">Colour Overrides</div>
+    <div class="color-selection option" v-if="theme">
+      <div class="color">
+        <div class="label">Feed Background</div>
+        <color-picker v-model="theme.fineGrainColor.feedBG" v-bind:reset="true"></color-picker>
+      </div>
+      <div class="color">
+        <div class="label">Category Pill</div>
+        <color-picker v-model="theme.fineGrainColor.pillsBG" v-bind:reset="true"></color-picker>
+      </div>
+      <div class="color">
+        <div class="label">Widget Background</div>
+        <color-picker v-model="theme.fineGrainColor.widgetBG" v-bind:reset="true"></color-picker>
+      </div>
+      <div class="color">
+        <div class="label">Tab Bar</div>
+        <color-picker v-model="theme.fineGrainColor.tabbarBG" v-bind:reset="true"></color-picker>
+      </div>
+      <div class="color">
+        <div class="label">Active Tab</div>
+        <color-picker v-model="theme.fineGrainColor.tabbarActiveBG" v-bind:reset="true"></color-picker>
+      </div>
+      <div class="color">
+        <div class="label">Button Background</div>
+        <color-picker v-model="theme.fineGrainColor.buttonBG" v-bind:reset="true"></color-picker>
+      </div>
+    </div>
+    <div class="divider-row">Tile Styling</div>
+    <div class="tile-styling option" v-if="theme">
+      <div class="color">
+        <div class="label">Border Colour</div>
+        <color-picker v-model="theme.tileStyle.borderColor"></color-picker>
+      </div>
+      <div class="number">
+        <div class="label">Border Radius (px)</div>
+        <input type="number" class="number-selector" v-model="theme.tileStyle.borderRadius">
+      </div>
+      <div class="toggle">
+        <div class="label">Shadow</div>
+        <toggle-view v-model="theme.tileStyle.enableShadow"></toggle-view>
+      </div>
+      <div class="number">
+        <div class="label">Side Margin (px)</div>
+        <input type="number" class="number-selector" v-model="theme.tileStyle.sideMargin">
+      </div>
+    </div>
+    <div class="divider-row">Category Configuration</div>
+    <div class="pill-selection option" v-if="theme">
+      <div class="toggle">
+        <div class="label">Enable</div>
+        <toggle-view v-model="theme.pillsEnabled"></toggle-view>
+      </div>
+      <div class="category-selector">
+        <div class="category">
+          <div class="label">Display Name</div>
+          <div class="label">Query Label</div>
+        </div>
+        <div class="category" v-for="pill in theme.pills">
+          <input type="text" placeholder="Display Name" v-model="pill.displayName">
+          <input type="text" placeholder="Query Label" v-model="pill.label">
+          <div class="remove" v-on:click="removeCategory(pill)">&times;</div>
+        </div>
+        <div class="category-add" v-on:click="addCategory">Add &plus;</div>
+      </div>
+    </div>
 
+    <div class="theme-picker" v-bind:class="[picker.isOpen?'open':'']">
+      <div class="modal">
+        <div class="header">
+          <div>{{pickerHeader}}</div>
+          <div class="search" v-if="picker.mode !== 'save'">
+            <i class="fa fa-search magnify"></i>
+            <input type="text" class="search-field" placeholder="Search for theme" v-model="rawSearchKey" ref="searchField">
+            <i class="fa fa-times clear" v-on:click="clearSearch"></i>
+          </div>
+        </div>
+        <div class="content" v-if="themes">
+          <div class="save-overlay" v-if="picker.isSaveOpen">
+            <div class="input-group">
+              <div class="label">Name</div>
+              <input class="themeName value" type="text" v-model="picker.tmpThemeName">
+            </div>
+            <div class="input-group">
+              <div class="label">Description</div>
+              <input class="themeDesc" type="text" v-model="picker.tmpThemeDesc">
+            </div>
+          </div>
+          <div class="inner-wrap" v-if="picker.isOpen && picker.mode !== 'save'" ref="themeslist">
+            <div class="theme" v-for="themeElem in filteredThemes" v-on:click="selectTheme(themeElem)">
+              <div class="mode">{{themeElem.theme.mode}}</div>
+              <div class="color-square">
+                <div class="color-opt" v-bind:style="{backgroundColor:themeElem.theme.primaryColor}"></div>
+                <div class="color-opt" v-bind:style="{backgroundColor:themeElem.theme.secondaryColor}"></div>
+                <div class="color-opt" v-bind:style="{backgroundColor:themeElem.theme.tertiaryColor}"></div>
+                <div class="color-opt" v-bind:style="{backgroundColor:themeElem.theme.foregroundColor}"></div>
+              </div>
+              <div class="meta-wrap">
+                <div class="descriptors">
+                  <div class="name">{{themeElem.name}}</div>
+                  <div class="desc">{{themeElem.desc}}</div>
+                </div>
+                <div class="details">
+                  <div class="splash asset-img" v-if="themeElem.theme.splashURL" v-bind:data-bg="'url('+themeElem.theme.splashURL+')'"></div>
+                  <div class="appscreen asset-img" v-if="themeElem.theme.appscreenURL"  v-bind:data-bg="'url('+themeElem.theme.appscreenURL+')'"></div>
+                  <div class="widget asset-img" v-if="themeElem.theme.widgetIconURL"  v-bind:data-bg="'url('+themeElem.theme.widgetIconURL+')'"></div>
+                </div>
+              </div>
+              <i class="fa fa-trash delete-theme" v-on:click.stop="deleteTheme(themeElem)"></i>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="btn secondary-btn cancel-theme" v-on:click="cancel">CANCEL</div>
+          <div class="btn primary-btn save-theme" v-if="picker.mode === 'save'" v-on:click="saveNewTheme">SAVE NEW</div>
+          <div class="btn primary-btn save-theme" v-if="picker.mode === 'save'" v-on:click="savePick">OVERWRITE EXISTING</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="compound-actions">
+    <div class="shadow-wrap alt-btn pick-btn hint--left" data-hint="Choose Theme" v-on:click="openThemePicker">
+      <div class="action-btn" title="Save">
+        <i class="fa fa-th-list"></i>
+      </div>
+    </div>
+    <div class="shadow-wrap alt-btn save-btn hint--left" data-hint="Save Theme" v-on:click="openSave">
+      <div class="action-btn" title="Save">
+        <i class="fa fa-save"></i>
+      </div>
+    </div>
+    <div class="shadow-wrap apply-btn hint--left" v-on:click="apply" data-hint="Apply Changes">
+      <div class="action-btn">
+        <i class="fa fa-check"></i>
+      </div>
+    </div>
+  </div>
+</div></script><script type="x-template" id="profiles-editor"><div class="profiles-editor">
+  <div class="inner-wrap">
+    <div class="list" v-if="profiles">
+      <profile-list v-bind:list="profiles.list" v-on:edit="modifyProfile" v-on:delete="deleteProfile"></profile-list>
+    </div>
+  </div>
+  <div class="edit-pane" v-bind:class="[modWindowOpen?'open':'']">
+    <loading-view v-if="isLoading"></loading-view>
+    <div class="header-wrap">
+      <i class="fa fa-chevron-left close-btn" v-on:click="cancelModify"></i>
+      <span class="label" v-if="isTmpNew">Create Profile</span>
+      <span class="label" v-else>Edit Profile</span>
+      <span class="save-btn" v-on:click="saveModify">SAVE</span>
+    </div>
+    <div class="profiledata-wrap">
+      <div class="option-wrap" v-if="tmpProfile">
+        <div class="option">
+          <div class="label">Profile Icon</div>
+          <image-field v-model="tmpProfile.iconURL" aspect-ratio="1/1"></image-field>
+        </div>
+        <div class="option">
+          <div class="label">Name</div>
+          <input type="text" class="value" placeholder="Enter Profile Name" v-model="tmpProfile.name">
+        </div>
+        <div class="option">
+          <div class="label">Description</div>
+          <textarea type="text" class="value" placeholder="Enter Profile Description" v-model="tmpProfile.description"></textarea>
+        </div>
+        <div class="option">
+          <div class="label">Color</div>
+          <color-picker class="value" v-model="tmpProfile.color"></color-picker>
+        </div>
+      </div>
+      <div class="option-wrap context" v-if="tmpProfile">
+        <div class="divider label"><span>Contextual State</span></div>
+        <ctxvalue-list v-bind:ctxs="tmpProfile.ctxs" v-on:edit="modifyCTX" v-on:delete="deleteCTX"></ctxvalue-list>
+        <div class="addctx-btn" v-on:click="modifyCTX">Add Context</div>
+      </div>
+      <div class="option-wrap auth" v-if="tmpProfile">
+        <div class="divider label"><span>Authentication Type</span></div>
+        <div class="radio-group">
+          <div class="opt">
+            <label>
+              <input type="radio" name="authtype" class="radio" value="anonymous" v-model="tmpProfile.authType"> Anonymous
+            </label>
+          </div>
+          <div class="opt">
+            <label>
+              <input type="radio" name="authtype" class="radio" value="jwt" v-model="tmpProfile.authType"> JWT
+            </label>
+          </div>
+          <div class="opt">
+            <label>
+              <input type="radio" name="authtype" class="radio" value="oidc" v-model="tmpProfile.authType"> Open ID Connect
+            </label>
+          </div>
+          <div class="opt">
+            <label>
+              <input type="radio" name="authtype" class="radio" value="okta" v-model="tmpProfile.authType"> Okta
+            </label>
+          </div>
+          <div class="opt">
+            <label>
+              <input type="radio" name="authtype" class="radio" value="flybits" v-model="tmpProfile.authType"> Flybits IDP
+            </label>
+          </div>
+        </div>
+        <div class="option-wrap oidc" v-if="tmpProfile.authType === 'jwt'">
+          <div class="option">
+            <div class="label">Token</div>
+            <textarea class="value" placeholder="Enter JWT" v-model="tmpProfile.auth.token"/>
+          </div>
+        </div>
+        <div class="option-wrap oidc" v-if="tmpProfile.authType === 'oidc'">
+          <div class="option">
+            <div class="label">ID Token</div>
+            <textarea class="value" placeholder="Enter ID Token" v-model="tmpProfile.auth.token"/>
+          </div>
+        </div>
+        <div class="option-wrap oidc" v-if="tmpProfile.authType === 'okta'">
+          <div class="option">
+            <div class="label">Access Token</div>
+            <textarea class="value" placeholder="Enter ID Token" v-model="tmpProfile.auth.token"/>
+          </div>
+        </div>
+        <div class="option-wrap oidc" v-if="tmpProfile.authType === 'flybits'">
+          <div class="option">
+            <div class="label">Username</div>
+            <input class="value" placeholder="Enter email" v-model="tmpProfile.auth.ref"/>
+          </div>
+          <div class="option">
+            <div class="label">Password</div>
+            <input class="value" placeholder="Enter password" type="password" v-model="tmpProfile.auth.token"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="shadow-wrap add-btn" v-on:click="addProfileTrigger">
+    <div class="action-btn" title="Create Profile">&plus;</div>
+  </div>
+</div></script><script type="x-template" id="color-picker"><div class="color-picker">
+  <div class="preview" v-bind:style="{'background-color':previewColor}"></div>
+  <div class="clear" v-if="reset" v-on:click="clear">&times;</div>
+</div></script><script type="x-template" id="image-manager"><div class="image-manager" v-bind:class="[isOpen?'open':'']">
+  <div class="modal">
+    <div class="header">
+      <span>Image Manager</span>
+      <i class="fa fa-times close-btn" v-on:click="closeManager(true)"></i>
+    </div>
+    <div class="content">
+      <div class="mode edit" v-if="isEdit && pixelPusher">
+        <div class="image-view">
+          <div class="history-con" v-if="!isDetail && pixelPusher && ((pixelPusher.backHistory.length > 1) || (pixelPusher.forwardHistory.length))">
+            <i class="fa fa-undo back con" v-bind:class="[(pixelPusher.backHistory.length > 1)?'':'disabled']" v-on:click="undo"></i>
+            <i class="fa fa-repeat forward con" v-bind:class="[pixelPusher.forwardHistory.length?'':'disabled']" v-on:click="redo"></i>
+          </div>
+          <img v-bind:src="pixelPusher.image.url" ref="imageEl">
+        </div>
+        <div class="edit-controls">
+          <div class="con-details rotate" v-bind:class="[detailMode === 'rotate'?'show':'']">
+            <input type="range" min='0' max='360' step="90" v-model="pixelPusher.state.rotate">
+          </div>
+          <div class="con-details blur" v-bind:class="[detailMode === 'blur'?'show':'']">
+            <input type="range" min='0' max='1' step="0.05" v-model="pixelPusher.state.blur">
+          </div>
+          <div class="con-details grayscale" v-bind:class="[detailMode === 'grayscale'?'show':'']">
+            <toggle-view v-model="pixelPusher.state.grayscale"></toggle-view>
+          </div>
+          <div class="con-details edit-con" v-bind:class="[detailMode?'show':'']">
+            <div class="action cancel" v-on:click="cancelDetail">
+              <i class="fa fa-times"></i>
+            </div>
+            <div class="action accept" v-on:click="acceptDetail">
+              <i class="fa fa-check"></i>
+            </div>
+          </div>
+          <div class="con-wrap" v-bind:class="[isDetail?'hide':'']">
+            <div class="con" v-on:click="pushMode('crop')">
+              <div class="con-inner-wrap">
+                <i class="icon fa fa-crop"></i>
+                <div class="label">Crop</div>
+              </div>
+            </div>
+            <div class="con" v-on:click="pushMode('rotate')">
+              <div class="con-inner-wrap">
+                <i class="icon fa fa-rotate-right"></i>
+                <div class="label">Rotate</div>
+              </div>
+            </div>
+            <div class="con" v-on:click="pushMode('blur')">
+              <div class="con-inner-wrap">
+                <i class="icon fa fa-tint"></i>
+                <div class="label">Blur</div>
+              </div>
+            </div>
+            <div class="con" v-on:click="pushMode('grayscale')">
+              <div class="con-inner-wrap">
+                <i class="icon fa fa-adjust"></i>
+                <div class="label">Grayscale</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mode selection" v-else>
+        <div class="image-list" v-on:scroll="listLoad" ref="imagelist">
+          <div class="image-content" ref="imageswrap">
+            <div class="image" v-for="image in store.images" v-bind:style="{backgroundImage: 'url(' + image.url + ')'}" v-on:click="selectImg(image)"></div>
+          </div>
+        </div>
+        <div class="selection-con">
+          <div class="image-details" v-if="currentImg">
+            <div class="preview" v-bind:style="{backgroundImage: 'url(' + currentImg.url + ')'}"></div>
+            <div class="btn-group">
+              <div class="btn minor-btn" v-on:click="switchMode('edit')">Edit</div>
+              <div class="btn minor-btn" v-on:click="deleteFile" v-if="currentImg.id">Delete</div>
+            </div>
+            <div class="file-details">
+              <div class="resolution detail">
+                <div class="label">Resolution:</div>
+                <div class="value">{{currentImg.dimensions.width}} &times; {{currentImg.dimensions.height}}</div>
+              </div>
+              <div class="size detail detail" v-if="currentImg.size">
+                <div class="label">Size:</div>
+                <div class="value">{{currentImg.sizeStr}}</div>
+              </div>
+              <div class="modified-at detail" v-if="currentImg.uploadedAt">
+                <div class="label">Last Modified:</div>
+                <div class="value">{{currentImg.uploadedAtStr}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="image-details" v-else>
+            <i class="fa fa-image image-placeholder"></i>
+          </div>
+          <div class="upload-con">
+            <div class="upload-file btn primary-btn" v-on:click="uploadFile">Upload File</div>
+            <div class="upload-url">
+              <input type="text" class="" placeholder="Upload from URL" v-model="urlToUpload">
+              <span class="upload-trigger primary-btn" v-on:click="uploadURL">
+                <i class="fa fa-upload"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="cancel-btn secondary-btn btn" v-on:click="cancelMode">Cancel</div>
+      <div class="finalize-edit-btn primary-btn btn" v-if="isEdit" v-on:click="finalizeEdit">Finalize Edit</div>
+      <div class="select-btn primary-btn btn" v-else v-on:click="completeManage">Select</div>
+    </div>
+  </div>
+</div></script><script type="x-template" id="image-field"><div class="image-field" v-on:click="openManager" v-bind:class="[editable?'editable':'']">
+  <div class="preview" v-bind:style="{backgroundImage: 'url(' + currentURL + ')'}"></div>
+  <div class="preview-popup" v-bind:style="{backgroundImage: 'url(' + currentURL + ')'}"></div>
+</div></script><script type="x-template" id="toggle-view"><div class="toggle-view">
+  <div class="toggle-label">{{label}}</div>
+  <i class="toggle-ind fa" v-bind:class="{'fa-toggle-off':!value,'fa-toggle-on':value}" v-on:click="toggle"></i>
+</div></script><script type="x-template" id="conditional-modal"><div class="conditional-modal">
+
+</div></script><script type="x-template" id="context-picker"><div class="context-picker" v-bind:class="[isOpen?'open':'']">
+  <div class="modal">
+    <div class="header">
+      <span class="label" v-if="isTmpNew">Select Context</span>
+      <span class="label" v-else>Edit Context</span>
+      <i class="fa fa-times close-btn" v-on:click="closePicker(true)"></i>
+    </div>
+    <div class="content">
+      <div class="ctx-selection">
+        <div class="icon" v-bind:style="{backgroundImage:'url('+selectedIcon+')'}"></div>
+        <select v-model="tmpCTX">
+          <option selected disabled hidden value="none">Select a Context Plugin</option>
+          <option v-for="plugin in plugins" v-bind:value="plugin">{{plugin.name}}</option>
+        </select>
+      </div>
+      <div class="value-container" v-if="tmpCTX.name">
+        <div class="edit-group attribute" v-for="attribute in tmpCTX.attributes">
+          <div class="label">{{attribute.name}}</div>
+          <field-type-editor v-bind:value="attribute"></field-type-editor>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="cancel-btn secondary-btn btn" v-on:click="closePicker">Cancel</div>
+      <div class="done-btn primary-btn btn" v-on:click="saveChanges">Done</div>
+    </div>
+  </div>
+
+</div></script><script type="x-template" id="field-type-editor"><div class="field-type-editor">
+  <div class="param-wrap">
+    <div class="param-edit" v-for="param in value.parameters">
+      <span class="param-label">{{param.name}}</span>
+      <input type="text" class="user-input" v-model="param._input">
+    </div>
+  </div>
+  <div class="value-wrap" v-if="type === 'bool'">
+    <toggle-view v-model="value._input" class="input"></toggle-view>
+  </div>
+  <div class="value-wrap" v-else-if="type === 'string'">
+    <div class="type-icon hint--bottom" data-hint="String">ABC</div>
+    <input type="text" class="user-input" v-model="value._input" placeholder="Enter text">
+  </div>
+  <div class="value-wrap" v-else-if="type === 'int'">
+    <div class="type-icon hint--bottom" data-hint="Integer (ex. 21)">#</div>
+    <input type="number" class="user-input" v-model="value._input" step=1 placeholder="Enter number">
+  </div>
+  <div class="value-wrap" v-else-if="type === 'float'">
+    <div class="type-icon hint--bottom" data-hint="Float (ex. 22.5165)">#.#</div>
+    <input type="number" class="user-input" v-model="value._input" step=any placeholder="Enter decimal number">
+  </div>
+  <div class="value-wrap" v-else-if="value.id === 'coordinates'">
+    <div class="value-wrap">
+      <div>Latitude</div>
+      <div class="type-icon hint--bottom" data-hint="Float (ex. 22.5165)">#.#</div>
+      <input type="number" class="user-input" v-model="tmp.lat" step=any placeholder="Latitude">
+    </div>
+    <div class="value-wrap">
+      <div>Longitude</div>
+      <div class="type-icon hint--bottom" data-hint="Float (ex. 22.5165)">#.#</div>
+      <input type="number" class="user-input" v-model="tmp.lng" step=any placeholder="Longitude">
+    </div>
+  </div>
+  <div class="value-wrap" v-else>
+    <div class="type-warning">
+      <i class="fa fa-warning"></i>
+      <span>UNSUPPORTED TYPE</span>
+    </div>
+  </div>
+</div></script><script type="x-template" id="ctxvalue-list"><div class="ctxvalue-list">
+  <div class="ctxval" v-for="ctxval in ctxs">
+    <div class="meta-wrap" v-if="ctxval.ctx">
+      <div class="icon" v-bind:style="{backgroundImage:'url('+ctxval.ctx.iconURL+')'}"></div>
+      <div class="ctx-label">{{ctxval.ctx.name}}</div>
+    </div>
+    <div class="values-wrap">
+      <div class="value-tile" v-for="value in getValues(ctxval)">
+        <div class="key">{{value.key}}</div>
+        <div class="value">{{value.value}}</div>
+      </div>
+    </div>
+    <div class="edit-con">
+      <i class="fa fa-pencil con" v-on:click="emitEdit(ctxval)"></i>
+      <i class="fa fa-trash con" v-on:click="emitDelete(ctxval)"></i>
+    </div>
+  </div>
+</div></script><script type="x-template" id="profile-list"><div class="profile-list">
+  <div class="profile" v-for="profile in list">
+    <div class="color-bar" v-bind:style="{'background-color':profile.color}"></div>
+    <div class="data-wrap">
+      <div class="profile-icon" v-bind:style="{'background-image':'url('+profile.iconURL+')'}"></div>
+      <div class="detail-blk">
+        <div class="label">{{profile.name}}</div>
+      </div>
+      <ctxvalue-list v-bind:ctxs="profile.ctxs"></ctxvalue-list>
+      <div class="edit-con">
+        <i class="fa fa-pencil con" v-on:click="emitEdit(profile)"></i>
+        <i class="fa fa-trash con" v-on:click="confirmDelete(profile)"></i>
+      </div>
+    </div>
+  </div>
+  <div class="delete-confirmation" v-if="profileDelete">
+    <div class="inner-confirm-wrap">
+      <div class="message">Are you sure you want to delete the profile?</div>
+      <div class="profile-preview">
+        <div class="profile-icon" v-bind:style="{'background-image':'url('+profileDelete.iconURL+')'}"></div>
+        <div class="name">{{profileDelete.name}}</div>
+      </div>
+      <div class="confirm-actions">
+        <div class="action secondary" v-on:click="cancelDelete">Cancel</div>
+        <div class="action" v-on:click="emitDelete">Delete</div>
+      </div>
+    </div>
+  </div>
+</div></script><!-- components:template:end --><!-- routes:template:start --><script type="x-template" id="splash-page"><div class="splash-page">
+  <loader-bar></loader-bar>
+  <img class="logo" src="images/flybits-logo-rgb.svg" alt="">
+</div></script><script type="x-template" id="landscape"><div class="landscape">
+  <div class="shadow-wrap cfg-btn">
+    <div class="action-btn" title="Configure Tenant" v-on:click="config">
+      <i class="fa fa-cogs"></i>
+    </div>
+  </div>
+  <div class="shadow-wrap link-btn">
+    <div class="action-btn" title="Show Link" v-on:click="showLink">
+      <i class="fa fa-picture-o"></i>
+    </div>
+  </div>
+  <div class="shadow-wrap add-btn">
+    <div class="action-btn" title="Add Window" v-on:click="addWindow">&plus;</div>
+  </div>
+</div></script><script type="x-template" id="configure"><div class="configure">
+  <login-modal></login-modal>
+  <div class="banner-info">
+    <router-link to="landscape">
+      <i class="fa fa-chevron-left back-btn"></i>
+    </router-link>
+    <div class="project-name" :class="[project.isActive?'active':'']" v-if="project">{{project.name}}</div>
+    <div class="version">{{version}}</div>
+    <api-usage :usage="project.limit.apiUsage" :max="project.limit.apiLimit" v-if="project"></api-usage>
+    <div class="logout-trigger" v-on:click="logout">Log Out</div>
+    <div class="mode-wrap">
+      <div class="mode-icon theme" v-on:click="switchMode(1)">
+        <i class="fa fa-paint-brush"></i>
+      </div>
+      <div class="mode-icon profile" v-on:click="switchMode(2)">
+        <i class="fa fa-users"></i>
+      </div>
+    </div>
+  </div>
+  <div class="panels" :class="panelMode">
+    <div class="panel">
+      <div class="content-wrap">
+        <theme-editor v-bind:theme="theme" v-bind:themes="themes"></theme-editor>
+      </div>
+      <div class="summary-pane theme" v-on:click="switchMode(1)">
+        <div class="color-bar" v-if="theme">
+          <div class="color primary hint--top" v-bind:style="{'background-color':theme.primaryColor}" data-hint="Primary Color"></div>
+          <div class="color secondary hint--top" v-bind:style="{'background-color':theme.secondaryColor}" data-hint="Secondary Color"></div>
+          <div class="color tertiary hint--top" v-bind:style="{'background-color':theme.tertiaryColor}" data-hint="Tertiary Color"></div>
+          <div class="color fg hint--top" v-bind:style="{'background-color':theme.fgColor}" data-hint="Foreground Color"></div>
+        </div>
+        <div class="mode-pane" v-if="theme">
+          <div class="mode fullscreen" v-if="isFullscreen">
+            <div class="label">Fullscreen Mode</div>
+            <img class="icon" src="images/type-fullscreen.png">
+          </div>
+          <div class="mode widget" v-if="isWidget">
+            <div class="label">Widget Mode</div>
+            <img class="icon" src="images/type-widget.png">
+          </div>
+          <div class="mode embedded" v-if="isEmbedded">
+            <div class="label">Embedded Mode</div>
+            <img class="icon" src="images/type-embedded.png">
+          </div>
+        </div>
+        <div class="images" v-if="theme">
+          <div class="image-block" v-if="theme.widgetIconURL && (isWidget || isEmbedded)">
+            <div class="label">Widget Icon</div>
+            <image-field v-model="theme.widgetIconURL" :editable=false></image-field>
+          </div>
+          <div class="image-block">
+            <div class="label">Splashscreen</div>
+            <image-field v-model="theme.splashURL" :editable=false v-if="theme.splashURL"></image-field>
+          </div>
+          <div class="image-block" v-if="theme.appscreenURL && (isWidget || isEmbedded)">
+            <div class="label">App Screen</div>
+            <image-field v-model="theme.appscreenURL" :editable=false></image-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="content-wrap">
+        <profiles-editor v-bind:profiles="profiles"></profiles-editor>
+      </div>
+      <div class="summary-pane profile" v-on:click="switchMode(2)">
+        <profile-list v-bind:list="profiles.list" v-if="profiles"></profile-list>
+      </div>
+    </div>
+  </div>
+  <image-manager></image-manager>
+  <context-picker v-bind:plugins="project.ctxPlugins" v-if="project"></context-picker>
+</div></script><script type="x-template" id="link-show"><transition name="fade">
+<div class="link-show">
+  <div class="top-curve" v-on:click="goback"></div>
+  <div class="content-wrap">
+    <div class="qr" ref="qr"></div>
+    <a v-bind:href="url" target="_blank" rel=noopener><div class="url">{{host}}</div></a>
+  </div>
+  <a href="https://flybits.com" target="_blank" rel=noopener><img src="/images/flybits-logo-rgb.svg" class="logo"></a>
+</div>
+</transition></script><!-- routes:template:end --><script src="libs-a18ce070de.js"></script><script src="app-34e7554205.js"></script><object id="__symantecPKIClientMessenger" data-supports-flavor-configuration="true" data-extension-version="0.5.0.109" style="display: none;"></object><span id="__symantecPKIClientDetector" style="display: none;">__PRESENT</span></body></html>
