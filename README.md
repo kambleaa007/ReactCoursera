@@ -3,7 +3,7 @@
 First React App- ReactJS Redux Coursera Honk Kong University Work https://kambleaa007.github.io/ReactCoursera/
 First React App
 
-### :point_right: Check final working and deployed application repository at https://github.com/kambleaa007/AshITech 
+### :point_right: Check final working and deployed application repository at https://github.com/kambleaa007/AshITech https://kambleaa007.github.io/AshITech/index
 
 installing as global package here
 ReactCoursera>npm install -g create-react-app@1.5.2
